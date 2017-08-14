@@ -10,17 +10,24 @@
 	<properties>
 		<org.springframework.version>4.2.1.RELEASE</org.springframework.version>
 		<apache.tiles>3.0.5</apache.tiles>
+		<spring.security.version>4.2.3.RELEASE</spring.security.version>
 	</properties>
 
 	<dependencies>
-	
+
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
@@ -39,7 +46,7 @@
 			<artifactId>spring-data-jpa</artifactId>
 			<version>1.9.0.RELEASE</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -51,7 +58,7 @@
 			<artifactId>tiles-core</artifactId>
 			<version>${apache.tiles}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
 			<artifactId>tiles-jsp</artifactId>
@@ -185,6 +192,23 @@
 			<version>${org.springframework.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -195,8 +219,8 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-					<fork>true</fork> 
- 					<executable>/usr/java/jdk1.8.0_121/bin/javac</executable>
+					<fork>true</fork>
+					<executable>/usr/java/jdk1.8.0_121/bin/javac</executable>
 				</configuration>
 			</plugin>
 			<plugin>
