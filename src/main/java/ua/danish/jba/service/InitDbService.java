@@ -47,7 +47,6 @@ public class InitDbService {
 		roleRepository.save(roleAdmin);
 		
 		User userAdmin = new User();
-//SUCCESS
 		userAdmin.setName("admin");
 		userAdmin.setPassword("admin");
 		List<Role> roles = new ArrayList<>();
