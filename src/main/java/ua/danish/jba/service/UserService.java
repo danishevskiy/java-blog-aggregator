@@ -22,7 +22,6 @@ import ua.danish.jba.repository.UserRepository;
 @Service
 @Transactional
 public class UserService {
-
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -65,5 +64,10 @@ public class UserService {
 		roles.add(roleRepository.findByName("ROLE_USER"));
 		user.setRoles(roles);
 		userRepository.save(user);
+	}
+
+	public User findOneWithBlogs(String name) {
+		User user = userRepository.findByName(name);
+		return findOneWithBlogs(user.getId());
 	}
 }
