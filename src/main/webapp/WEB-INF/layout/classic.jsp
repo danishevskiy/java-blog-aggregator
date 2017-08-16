@@ -3,12 +3,11 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <!DOCTYPE html>
 <html>
+<!-- HEAD -->
 <head>
-
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="security"%>
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -28,17 +27,14 @@
 	crossorigin="anonymous"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title><tiles:getAsString name="title"></tiles:getAsString></title>
-
 </head>
+<!-- /HEAD -->
+<!-- BODY -->
 <body>
 	<%@ taglib uri="http://tiles.apache.org/tags-tiles-extras"
 		prefix="tilesx"%>
-
-	<tilesx:useAttribute name="current" />
-	${current}
-
 	<div class="container">
-
+		<!-- NAVBAR -->
 		<!-- Static navbar -->
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -60,30 +56,29 @@
 							<li class="${current == 'users' ? 'active' : ''}"><a
 								href="<spring:url value="/users.html"/>">Users</a></li>
 						</security:authorize>
-						<security:authorize access="! isAuthenticated()">
+						
 							<li class="${current == 'register' ? 'active' : ''}"><a
 								href="<spring:url value="/register.html"/>">Registration</a></li>
-
+						<security:authorize access="! isAuthenticated()">
 							<li class="${current == 'login' ? 'active' : ''}"><a
 								href="<spring:url value="/login.html"/>">Login</a></li>
 						</security:authorize>
 						<security:authorize access="isAuthenticated()">
 							<li><a href="<spring:url value="/logout"/>">Logout</a></li>
 						</security:authorize>
-
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
 			</div>
 			<!--/.container-fluid -->
 		</nav>
-
+		<!-- /NAVBAR -->		
 		<tiles:insertAttribute name="body" />
-
 		<br> <br>
-
-			<tiles:insertAttribute name="footer"></tiles:insertAttribute>
-
+		<!-- FOOTER -->
+		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
+		<!-- /FOOTER -->
 	</div>
 </body>
+<!-- /BODY -->
 </html>
