@@ -82,9 +82,7 @@
 
 		<br> <br>
 
-		<center>
 			<tiles:insertAttribute name="footer"></tiles:insertAttribute>
-		</center>
 
 	</div>
 </body>

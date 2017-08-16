@@ -19,7 +19,7 @@ public class Role {
 	
 	private String name;
 	
-	@ManyToMany(mappedBy="roles")
+	@ManyToMany(mappedBy = "roles")
 	private List<User> users;
 
 	public Integer getId() {

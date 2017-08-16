@@ -39,17 +39,17 @@ public class InitDbService {
 	@PostConstruct 
 	public void init(){
 		Role roleUser = new Role();
-		roleUser.setName("USER");
+		roleUser.setName("ROLE_USER");
 		roleRepository.save(roleUser);
-		
+
 		Role roleAdmin = new Role();
-		roleUser.setName("ADMIN");
+		roleAdmin.setName("ROLE_ADMIN");
 		roleRepository.save(roleAdmin);
 		
 		User userAdmin = new User();
 		userAdmin.setName("admin");
 		userAdmin.setPassword("admin");
-		List<Role> roles = new ArrayList<Role>();
+		List<Role> roles = new ArrayList<>();
 		roles.add(roleAdmin);
 		roles.add(roleUser);
 		userAdmin.setRoles(roles);
@@ -74,6 +74,7 @@ public class InitDbService {
 		item2.setLink("http://www.javavids.com");
 		item2.setPublishedDate(new Date());
 		itemRepository.save(item2);
+		
 	}
 
 }
