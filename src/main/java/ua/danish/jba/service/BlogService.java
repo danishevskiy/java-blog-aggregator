@@ -10,10 +10,10 @@ import ua.danish.jba.repository.UserRepository;
 
 @Service
 public class BlogService {
-	
+
 	@Autowired
 	private BlogRepository blogRepository;
-	
+
 	@Autowired
 	private UserRepository userRepository;
 
@@ -21,6 +21,10 @@ public class BlogService {
 		User user = userRepository.findByName(name);
 		blog.setUser(user);
 		blogRepository.save(blog);
+	}
+
+	public void delete(int id) {
+		blogRepository.delete(id);
 	}
 
 }

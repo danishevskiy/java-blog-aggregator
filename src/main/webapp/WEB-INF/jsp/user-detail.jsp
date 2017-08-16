@@ -6,7 +6,7 @@
 <h1>${user.name}</h1>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-	data-target="#myModal">New Blog</button>
+	data-target="#myModal">New blog</button>
 <form:form commandName="blog" cssClass="form-horizontal">
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -63,7 +63,10 @@
 		<c:forEach items="${user.blogs}" var="blog">
 			<div role="tabpanel" class="tab-pane" id="blog_${blog.id}">
 				<h1>${blog.name}</h1>
-				<p>${blog.url}</p>
+				<p>
+					<a href="<spring:url value="/blog/remove/${blog.id}.html"/>"
+						class="btn btn-danger">remove blog</a> ${blog.url}
+				</p>
 				<table class="table table-bordered table-hover table-striped">
 					<thead>
 						<tr>
