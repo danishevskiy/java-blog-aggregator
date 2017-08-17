@@ -24,7 +24,9 @@
 		<c:forEach items="${users}" var="user">
 			<tr>
 				<td><a href="<spring:url value="/users/${user.id}.html" />">
-						${user.name} </a></td>
+						<c:out value="${user.name}"/>
+					</a>
+				</td>
 				<td><a
 					href="<spring:url value="/users/remove/${user.id}.html" />"
 					class="btn btn-danger triggerRemove"> remove </a></td>
