@@ -104,25 +104,6 @@
 			<feedburner:origLink>http://www.javavids.com/video/apache-tomcat--netbeans-integration.html
 			</feedburner:origLink>
 		</item>
-		<item>
-			<title>Apache Tomcat as a Windows service</title>
-			<description>How to run Tomcat as a Windows service?&lt;img
-				src="http://feeds.feedburner.com/~r/javavids/~4/w-5wbpSJbxM"
-				height="1" width="1"/&gt;</description>
-			<link>http://feedproxy.google.com/~r/javavids/~3/w-5wbpSJbxM/apache-tomcat-as-a-windows-service.html</link>
-			<pubDate>Wed, 19 Mar 2014 18:14:11 +0000</pubDate>
-			<feedburner:origLink>http://www.javavids.com/video/apache-tomcat-as-a-windows-service.html
-			</feedburner:origLink>
-		</item>
-		<item>
-			<title>Maven multi module project</title>
-			<description>How to create a Multi module project?&lt;img
-				src="http://feeds.feedburner.com/~r/javavids/~4/fvrRuYBEldg"
-				height="1" width="1"/&gt;</description>
-			<link>http://feedproxy.google.com/~r/javavids/~3/fvrRuYBEldg/maven-multi-module-project.html</link>
-			<pubDate>Fri, 31 Jan 2014 13:20:47 +0000</pubDate>
-			<feedburner:origLink>http://www.javavids.com/video/maven-multi-module-project.html
-			</feedburner:origLink>
-		</item>
+
 	</channel>
 </rss>

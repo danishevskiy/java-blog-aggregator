@@ -1,7 +1,6 @@
 package ua.danish.jba.service;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -12,11 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import ua.danish.jba.entity.Blog;
-import ua.danish.jba.entity.Item;
 import ua.danish.jba.entity.Role;
 import ua.danish.jba.entity.User;
 import ua.danish.jba.repository.BlogRepository;
-import ua.danish.jba.repository.ItemRepository;
 import ua.danish.jba.repository.RoleRepository;
 import ua.danish.jba.repository.UserRepository;
 
@@ -33,9 +30,6 @@ public class InitDbService {
 	
 	@Autowired
 	private BlogRepository blogRepository;
-	
-	@Autowired
-	private ItemRepository itemRepository;
 	
 	@PostConstruct 
 	public void init(){
@@ -64,19 +58,6 @@ public class InitDbService {
 		blog.setUser(userAdmin);
 		blogRepository.save(blog);
 		
-		Item item = new Item();
-		item.setBlog(blog);
-		item.setTitle("first");
-		item.setLink("http://www.javavids.com");
-		item.setPublishedDate(new Date());
-		itemRepository.save(item);
-		
-		Item item2 = new Item();
-		item2.setBlog(blog);
-		item2.setTitle("second");
-		item2.setLink("http://www.javavids.com");
-		item2.setPublishedDate(new Date());
-		itemRepository.save(item2);
 		
 	}
 
