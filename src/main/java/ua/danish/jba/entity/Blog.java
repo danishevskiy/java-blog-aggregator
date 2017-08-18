@@ -3,6 +3,7 @@ package ua.danish.jba.entity;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -25,6 +26,7 @@ public class Blog {
 	
 	@Size(min = 1, message = "Invalid URL!")
 	@URL
+	@Column(length=1000)
 	private String url;
 	
 	@Size(min = 2, message = "Name must be at 2 characters!")

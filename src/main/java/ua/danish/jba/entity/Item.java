@@ -11,13 +11,17 @@ public class Item {
 	@GeneratedValue
 	private Integer id;
 	
+	@Column(length=1000)
 	private String title;
 	
-	private String discription;
+	@Lob
+	@Column(length=Integer.MAX_VALUE)
+	private String description;
 	
 	@Column(name="published_date")
 	private Date publishedDate;
 	
+	@Column(length=1000)
 	private String link;
 	
 	@ManyToOne
@@ -48,12 +52,12 @@ public class Item {
 		this.title = title;
 	}
 
-	public String getDiscription() {
-		return discription;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDiscription(String discription) {
-		this.discription = discription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Date getPublishedDate() {

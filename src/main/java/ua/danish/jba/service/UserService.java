@@ -22,20 +22,19 @@ import ua.danish.jba.repository.UserRepository;
 @Service
 @Transactional
 public class UserService {
-	
+
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private RoleRepository roleRepository;
-	
+
 	@Autowired
 	private BlogRepository blogRepository;
-	
+
 	@Autowired
 	private ItemRepository itemRepository;
 
-	
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
@@ -48,7 +47,7 @@ public class UserService {
 	public User findOneWithBlogs(int id) {
 		User user = findOne(id);
 		List<Blog> blogs = blogRepository.findByUser(user);
-		for(Blog blog : blogs) {
+		for (Blog blog : blogs) {
 			List<Item> items = itemRepository.findByBlog(blog, new PageRequest(0, 10, Direction.DESC, "publishedDate"));
 			blog.setItems(items);
 		}
@@ -73,5 +72,9 @@ public class UserService {
 
 	public void delete(int id) {
 		userRepository.delete(id);
+	}
+
+	public User findOne(String username) {
+		return userRepository.findByName(username);
 	}
 }
