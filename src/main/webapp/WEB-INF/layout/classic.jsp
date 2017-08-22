@@ -49,7 +49,7 @@
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href='<spring:url value="/" />'>JBA</a>
+					<a class="navbar-brand" href='<spring:url value="/" />'>DJBA</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -78,14 +78,13 @@
 		</nav>
 		<!-- /NAVBAR -->
 		<tiles:insertAttribute name="body" />
-		<br> <br>
-		<!-- FOOTER -->
-		<div class="row">
-			<div class="col-sm-12">
-				<center><tiles:insertAttribute name="footer"></tiles:insertAttribute></center>
-			</div>	
+		<div class="col-sm-12">
+			<br> <br>
+			<center>
+				<tiles:insertAttribute name="footer" />
+			</center>
+			<!-- /FOOTER -->
 		</div>
-		<!-- /FOOTER -->
 	</div>
 </body>
 <!-- /BODY -->
