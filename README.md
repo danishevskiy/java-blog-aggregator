@@ -1,4 +1,4 @@
-# java-blog-aggregator
+# djba
 
 	Spring MVC
 	Apache Tiles 
