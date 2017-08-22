@@ -39,7 +39,7 @@
 	<div class="container">
 		<!-- NAVBAR -->
 		<!-- Static navbar -->
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed"
@@ -80,7 +80,11 @@
 		<tiles:insertAttribute name="body" />
 		<br> <br>
 		<!-- FOOTER -->
-		<tiles:insertAttribute name="footer"></tiles:insertAttribute>
+		<div class="row">
+			<div class="col-sm-12">
+				<center><tiles:insertAttribute name="footer"></tiles:insertAttribute></center>
+			</div>	
+		</div>
 		<!-- /FOOTER -->
 	</div>
 </body>

@@ -36,11 +36,12 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
 </style>
 
 <form class="form-signin" role="form" action="/login" method="POST">
 	<h2 class="form-signin-heading">Please sign in</h2>
 	<input type="text" name="username" class="form-control" placeholder="Name" required autofocus>
 	<input type="password" name="password" class="form-control" placeholder="Password" required>
-	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign	in</button>
+	<button class="btn btn-lg btn-primary navbar-inverse btn-block" type="submit">Sign	in</button>
 </form>
